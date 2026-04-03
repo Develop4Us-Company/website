@@ -701,9 +701,17 @@ h4,
 
 @media (max-width: 991.98px) {
   .glass-nav .container {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
-  
+
+  .glass-nav .navbar-collapse {
+    flex-basis: 100%;
+  }
+
+  .brand-logo {
+    width: min(48vw, 180px);
+  }
+
   .hero-section {
     padding-top: 6.8rem;
   }
