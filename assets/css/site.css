@@ -1,0 +1,708 @@
+:root {
+  --bg: #171717;
+  --bg-soft: #1f1f1f;
+  --surface: #232323;
+  --surface-strong: #2c2c2c;
+  --primary: #7a63ff;
+  --primary-strong: #9585ff;
+  --heading: #f4f4f5;
+  --text: #d3d3d7;
+  --muted: #a3a3ad;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+  --radius-xl: 1.75rem;
+  --radius-lg: 1.25rem;
+  --radius-md: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(122, 99, 255, 0.16), transparent 28%),
+    radial-gradient(circle at left center, rgba(56, 189, 248, 0.08), transparent 30%),
+    linear-gradient(180deg, #111111 0%, var(--bg) 24%, #141414 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-shell {
+  overflow-x: hidden;
+}
+
+.section-pad {
+  padding: 5rem 0;
+}
+
+.section-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+  background: rgba(16, 16, 16, 0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.brand-logo,
+.footer-logo,
+.about-logo {
+  height: auto;
+}
+
+.brand-logo {
+  width: min(76vw, 340px);
+}
+
+.footer-logo,
+.about-logo {
+  width: min(72vw, 340px);
+}
+
+.nav-link,
+.footer-links a,
+.hero-copy,
+.section-copy,
+.course-card p,
+.video-card p,
+.guide-step-card p,
+.guide-card p,
+footer p,
+footer small,
+.mini-note,
+.cookie-consent p {
+  color: var(--text);
+}
+
+.nav-link {
+  font-weight: 700;
+  color: #dcdce2;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.footer-links a:hover,
+.footer-links a:focus,
+.cookie-consent a:hover,
+.cookie-consent a:focus {
+  color: #ffffff;
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 800;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(122, 99, 255, 0.18);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--primary-strong);
+  --bs-btn-hover-border-color: var(--primary-strong);
+  --bs-btn-active-bg: var(--primary-strong);
+  --bs-btn-active-border-color: var(--primary-strong);
+  --bs-btn-disabled-bg: var(--primary);
+  --bs-btn-disabled-border-color: var(--primary);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.display-5,
+.display-6,
+h1,
+h2,
+h3,
+h4,
+.showcase-item h3,
+.video-card h3,
+.course-card h3,
+.guide-step-card h3,
+.guide-card h3 {
+  color: var(--heading);
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(122, 99, 255, 0.12);
+  color: #d8d0ff;
+  border: 1px solid rgba(122, 99, 255, 0.25);
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.hero-section {
+  padding-top: 7.6rem;
+}
+
+.hero-copy,
+.section-copy {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 46rem;
+}
+
+.card-surface,
+.course-card,
+.video-card,
+.subscription-box,
+.all-access-banner,
+.hero-showcase,
+.guide-card,
+.guide-step-card,
+.stack-summary-box,
+.about-visual {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.hero-points {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hero-point {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-point i,
+.showcase-icon,
+.video-label i,
+.promo-list i,
+.guide-step-number {
+  color: var(--primary);
+}
+
+.hero-point strong {
+  color: #ffffff;
+}
+
+.hero-showcase {
+  padding: 1.4rem;
+}
+
+.showcase-top {
+  margin-bottom: 1.25rem;
+}
+
+.showcase-top h2 {
+  margin: 0.9rem 0 0.6rem;
+  font-size: clamp(1.55rem, 2vw, 2rem);
+}
+
+.showcase-top p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.showcase-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.showcase-item {
+  display: flex;
+  gap: 0.95rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.highlight-item {
+  background: linear-gradient(135deg, rgba(122, 99, 255, 0.18), rgba(255, 255, 255, 0.03));
+  border-color: rgba(122, 99, 255, 0.24);
+}
+
+.showcase-icon {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 3rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 1rem;
+  background: rgba(122, 99, 255, 0.14);
+  border: 1px solid rgba(122, 99, 255, 0.24);
+  font-size: 1.2rem;
+}
+
+.showcase-item h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.06rem;
+  font-weight: 800;
+}
+
+.showcase-item p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.section-heading {
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.all-access-banner,
+.guide-card {
+  padding: 1.5rem;
+}
+
+.price-highlight,
+.subscription-price,
+
+.course-pricing {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.course-pricing .btn {
+  padding: 0.9rem 1rem;
+  line-height: 1.25;
+}
+
+.course-pricing .btn strong {
+  font-size: 1.05rem;
+}
+
+.course-link-inline {
+  margin-top: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #d8d0ff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.subscription-box {
+  padding: 1.45rem;
+  background: linear-gradient(180deg, rgba(122, 99, 255, 0.22), rgba(122, 99, 255, 0.08)), rgba(255, 255, 255, 0.03);
+}
+
+.small-label,
+.course-tag,
+.video-label,
+.guide-step-label {
+  font-weight: 800;
+}
+
+.small-label {
+  display: block;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+}
+
+.subscription-price {
+  margin: 0.35rem 0 0.8rem;
+  font-size: clamp(2.1rem, 7vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.promo-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.7rem;
+}
+
+.promo-list i {
+  margin-top: 0.1rem;
+}
+
+.course-card,
+.video-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.course-body,
+.video-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-thumb,
+.video-thumb {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  background: #111;
+}
+
+.course-thumb-image,
+.video-thumb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-card h3,
+.video-card h3,
+.guide-step-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.course-card p,
+.video-card p,
+.guide-step-card p,
+.guide-card p,
+.subscription-box p,
+.showcase-top p,
+.showcase-item p {
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.course-tag,
+.video-label {
+  color: #d8d0ff;
+}
+
+.course-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: auto;
+}
+
+.course-price {
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.course-note,
+.mini-note,
+.footer-contact,
+.stack-summary-list li,
+.cookie-consent a {
+  color: var(--muted);
+}
+
+.video-thumb-link {
+  display: block;
+  text-decoration: none;
+}
+
+.video-play-badge {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(9, 9, 10, 0.78);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  font-size: 1.4rem;
+}
+
+.guide-card {
+  align-items: center;
+}
+
+.stack-summary-box {
+  padding: 1.4rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(122, 99, 255, 0.05));
+}
+
+.stack-summary-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-summary-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  line-height: 1.6;
+}
+
+.stack-summary-list span {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(122, 99, 255, 0.14);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.guide-step-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.guide-step-number {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 3rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 1rem;
+  background: rgba(122, 99, 255, 0.14);
+  border: 1px solid rgba(122, 99, 255, 0.24);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.guide-step-label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  color: #d8d0ff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about-visual {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.about-logo-wrap {
+  width: 100%;
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at center, rgba(122, 99, 255, 0.12), transparent 55%), rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.text-secondary {
+  color: var(--muted) !important;
+}
+
+.cookie-consent {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1100;
+}
+
+.cookie-consent__content {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1.25rem;
+  background: rgba(16, 16, 16, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: var(--shadow);
+}
+
+.cookie-consent p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.cookie-consent a {
+  font-weight: 800;
+}
+
+.legal-page {
+  min-height: 100vh;
+  padding-top: 7rem;
+}
+
+.legal-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.legal-card h1,
+.legal-card h2 {
+  color: var(--heading);
+}
+
+.legal-card h2 {
+  font-size: 1.2rem;
+  margin-top: 1.7rem;
+}
+
+.legal-card p,
+.legal-card li {
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.legal-card a {
+  color: #ddd6ff;
+}
+
+@media (min-width: 576px) {
+  .section-pad {
+    padding: 5.5rem 0;
+  }
+
+  .cookie-consent__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1rem 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .showcase-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-copy {
+    font-size: 1.08rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.hero-section .row {
+  align-items: center;
+}
+
+.price-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.price-option + .price-option {
+  margin-top: 0.65rem;
+}
+
+.price-option.primary {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.price-option.secondary {
+  background: rgba(122, 99, 255, 0.12);
+  border-color: rgba(122, 99, 255, 0.22);
+}
+
+.price-label {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bundle-price {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.course-note {
+  display: block;
+  margin-top: 0.7rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 6.8rem;
+  }
+
+  .hero-section .row > .order-1 {
+    order: 1 !important;
+  }
+
+  .hero-section .row > .order-2 {
+    order: 2 !important;
+  }
+}
