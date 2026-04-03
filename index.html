@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Develop4Us | Cursos de Programação em C#</title>
+  <meta name="description" content="Aprenda programação com cursos práticos de C#, backend, frontend, arquitetura .NET e machine learning. Estude no seu ritmo com assinatura mensal ou cursos individuais.">
+  <meta name="keywords" content="Develop4Us, cursos de programação, C#, backend, frontend, arquitetura .NET, machine learning, Hotmart">
+  <meta name="author" content="Develop4Us">
+  <meta name="theme-color" content="#171717">
+
+  <meta property="og:title" content="Develop4Us | Cursos de Programação em C#">
+  <meta property="og:description" content="Cursos práticos para quem quer aprender C#, backend, frontend, arquitetura .NET e machine learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://develop4us.com/">
+  <meta property="og:image" content="assets/img/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Develop4Us | Cursos de Programação em C#">
+  <meta name="twitter:description" content="Cursos práticos para quem quer aprender C#, backend, frontend, arquitetura .NET e machine learning.">
+  <meta name="twitter:image" content="assets/img/logo.png">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8VQVEPZ1S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N8VQVEPZ1S');
+  </script>
+</head>
+<body>
+  <div class="site-shell">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" aria-label="Barra principal">
+        <div class="container py-2">
+          <a class="navbar-brand d-flex align-items-center gap-3" href="#inicio" aria-label="Ir para o início">
+            <img src="assets/img/logo.png" alt="Logo da Develop4Us" class="brand-logo">
+          </a>
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 mt-3 mt-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+              <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#trilha">Do Zero ao Stack</a></li>
+              <li class="nav-item"><a class="nav-link" href="#youtube">YouTube</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+              <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm px-4 py-2" href="https://academy.develop4us.com" target="_blank" rel="noopener noreferrer">Acessar cursos</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero-section section-pad">
+        <div class="container position-relative">
+          <div class="row align-items-center g-5">
+            <div class="col-12 col-lg-6 order-1 order-lg-1">
+              <h1 class="display-5 fw-black mb-3">Aprenda C#, backend, frontend, arquitetura, IA e muito mais</h1>
+              <p class="hero-copy mb-4">
+                Na Develop4Us você encontra cursos pensados para quem quer começar do zero, crescer com consistência e desenvolver uma visão mais profissional sobre tecnologia. Estude por curso individual ou assine todos juntos por um valor menor.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-3 hero-actions">
+                <a href="#cursos" class="btn btn-primary btn-lg px-4">Ver todos os cursos</a>
+              </div>
+
+              <div class="hero-points mt-4">
+                <div class="hero-point"><i class="bi bi-check2-circle"></i><span>Cursos individuais por <strong>R$ 19,90/mês</strong></span></div>
+                <div class="hero-point"><i class="bi bi-check2-circle"></i><span>Assinatura com <strong>todos os cursos por R$ 29,90/mês</strong></span></div>
+                <div class="hero-point"><i class="bi bi-check2-circle"></i><span>Cancelamento simples quando quiser</span></div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6 order-2 order-lg-2">
+              <div class="hero-showcase card-surface">
+                <div class="showcase-top">
+                  <span class="showcase-badge"><i class="bi bi-stars"></i> Escolha como estudar</span>
+                  <h2>Mais liberdade para aprender</h2>
+                  <p>Você pode entrar em um curso específico ou assinar o acesso aos cursos juntos e estudar com mais economia.</p>
+                </div>
+
+                <div class="showcase-grid">
+                  <article class="showcase-item highlight-item">
+                    <div class="showcase-icon"><i class="bi bi-collection-play"></i></div>
+                    <div>
+                      <h3>Todos os cursos</h3>
+                      <p>Assine a biblioteca completa por <strong>R$ 29,90/mês</strong> e cancele quando quiser.</p>
+                    </div>
+                  </article>
+                  <article class="showcase-item">
+                    <div class="showcase-icon"><i class="bi bi-mortarboard"></i></div>
+                    <div>
+                      <h3>Curso individual</h3>
+                      <p>Escolha apenas o tema que você quer estudar por <strong>R$ 19,90/mês</strong>.</p>
+                    </div>
+                  </article>
+                  <article class="showcase-item">
+                    <div class="showcase-icon"><i class="bi bi-signpost-split"></i></div>
+                    <div>
+                      <h3>Do Zero ao Stack</h3>
+                      <p>Siga uma sequência clara de cursos para começar do zero e evoluir com mais segurança.</p>
+                    </div>
+                  </article>
+                  <article class="showcase-item">
+                    <div class="showcase-icon"><i class="bi bi-youtube"></i></div>
+                    <div>
+                      <h3>Conteúdo gratuito</h3>
+                      <p>Use os vídeos do YouTube para continuar aprendendo e conhecer o estilo das aulas.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cursos" class="section-pad section-divider">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Catálogo</span>
+            <h2 class="display-6 fw-black mt-2">Nossos cursos</h2>
+            <p class="section-copy mx-auto">Assine um curso específico por <strong>R$ 19,90 por mês</strong> ou assine <strong>todos</strong> os cursos por apenas <strong>R$ 29,90 por mês</strong>.</p>
+          </div>
+
+          <div class="all-access-banner row g-4 align-items-center mb-5">
+            <div class="col-12 col-lg-8">
+              <span class="eyebrow">Assinatura completa</span>
+              <h3 class="fw-black mt-2 mb-3">Leve todos os cursos juntos por <span class="price-highlight">R$ 29,90/mês</span></h3>
+              <p class="mb-3">Se você quiser estudar mais de um tema, a assinatura completa faz mais sentido. Em vez de assinar cursos separados, você libera o conjunto de cursos disponíveis por um preço incrível.</p>
+              <ul class="list-unstyled promo-list mb-0">
+                <li><i class="bi bi-check-circle-fill"></i> Acesso a todos os cursos participantes</li>
+                <li><i class="bi bi-check-circle-fill"></i> Economia para quem quer estudar várias áreas</li>
+                <li><i class="bi bi-check-circle-fill"></i> Cancelamento quando quiser</li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="subscription-box h-100">
+                <div class="small-label">ASSINATURA COMPLETA</div>
+                <div class="subscription-price">R$ 29,90</div>
+                <p class="mb-4">por mês para estudar todos os cursos juntos.</p>
+                <a href="HOTMART_COMBO" class="btn btn-primary w-100 mb-2" target="_blank" rel="noopener noreferrer">Assinar todos os cursos</a>
+                <p class="mini-note mb-0 text-center">Cancele quando quiser.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4" id="courseGrid">
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="course-card h-100">
+                <div class="course-thumb">
+                  <img src="assets/img/logo_c1.png" alt="Capa do curso Aprendendo a Programar" class="course-thumb-image">
+                </div>
+                <div class="course-body">
+                  <div class="d-flex justify-content-between align-items-center gap-2 mb-2 flex-wrap">
+                    <span class="badge text-bg-dark">Iniciante</span>
+                    <span class="course-tag">C#</span>
+                  </div>
+                  <h3>Aprendendo a Programar</h3>
+                  <p>Curso ideal para quem quer começar do zero em programação com C#. Você aprende lógica, variáveis, condições, laços, funções e os fundamentos da orientação a objetos de forma prática e passo a passo.</p>
+                  <div class="course-pricing mt-auto">
+                    <a href="HOTMART_CURSO_CSHARP_AQUI" class="btn btn-outline-light flex-fill" target="_blank" rel="noopener noreferrer">Só este curso<br><strong>R$ 19,90/mês</strong></a>
+                    <a href="HOTMART_COMBO" class="btn btn-primary flex-fill" target="_blank" rel="noopener noreferrer">Todos os cursos<br><strong>R$ 29,90/mês</strong></a>
+                  </div>
+                  <a href="HOTMART_CURSO_CSHARP_AQUI" class="course-link-inline" target="_blank" rel="noopener noreferrer">Conhecer o curso <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="course-card h-100">
+                <div class="course-thumb">
+                  <img src="assets/img/logo_c2.png" alt="Capa do curso Aprendendo Backend em C#: Banco de Dados, API e Segurança" class="course-thumb-image">
+                </div>
+                <div class="course-body">
+                  <div class="d-flex justify-content-between align-items-center gap-2 mb-2 flex-wrap">
+                    <span class="badge text-bg-dark">Intermediário</span>
+                    <span class="course-tag">Backend</span>
+                  </div>
+                  <h3>Aprendendo Backend em C#: Banco de Dados, API e Segurança</h3>
+                  <p>Aprenda a criar APIs com C#, trabalhar com banco de dados usando EF Core e proteger sua aplicação com autenticação JWT. Um curso focado em backend na prática, com tecnologias muito usadas no mercado.</p>
+                  <div class="course-pricing mt-auto">
+                    <a href="HOTMART_CURSO_BACKEND_AQUI" class="btn btn-outline-light flex-fill" target="_blank" rel="noopener noreferrer">Só este curso<br><strong>R$ 19,90/mês</strong></a>
+                    <a href="HOTMART_COMBO" class="btn btn-primary flex-fill" target="_blank" rel="noopener noreferrer">Todos os cursos<br><strong>R$ 29,90/mês</strong></a>
+                  </div>
+                  <a href="HOTMART_CURSO_BACKEND_AQUI" class="course-link-inline" target="_blank" rel="noopener noreferrer">Conhecer o curso <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="course-card h-100">
+                <div class="course-thumb">
+                  <img src="assets/img/logo_c5.png" alt="Capa do curso Aprendendo Frontend: HTML, CSS, Bootstrap, JS e Blazor" class="course-thumb-image">
+                </div>
+                <div class="course-body">
+                  <div class="d-flex justify-content-between align-items-center gap-2 mb-2 flex-wrap">
+                    <span class="badge text-bg-dark">Intermediário</span>
+                    <span class="course-tag">Frontend</span>
+                  </div>
+                  <h3>Aprendendo Frontend: HTML, CSS, Bootstrap, JS e Blazor</h3>
+                  <p>Um curso para aprender frontend desde a base, entendendo como o navegador interpreta uma página e evoluindo por HTML, CSS, responsividade, JavaScript e Blazor. Ideal para quem quer construir interfaces modernas de forma progressiva.</p>
+                  <div class="course-pricing mt-auto">
+                    <a href="HOTMART_CURSO_FRONTEND_AQUI" class="btn btn-outline-light flex-fill" target="_blank" rel="noopener noreferrer">Só este curso<br><strong>R$ 19,90/mês</strong></a>
+                    <a href="HOTMART_COMBO" class="btn btn-primary flex-fill" target="_blank" rel="noopener noreferrer">Todos os cursos<br><strong>R$ 29,90/mês</strong></a>
+                  </div>
+                  <a href="HOTMART_CURSO_FRONTEND_AQUI" class="course-link-inline" target="_blank" rel="noopener noreferrer">Conhecer o curso <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="course-card h-100">
+                <div class="course-thumb">
+                  <img src="assets/img/logo_c4.png" alt="Capa do curso Arquitetura .NET: Crie Sistemas com Backend e Frontend em C#" class="course-thumb-image">
+                </div>
+                <div class="course-body">
+                  <div class="d-flex justify-content-between align-items-center gap-2 mb-2 flex-wrap">
+                    <span class="badge text-bg-dark">Avançado</span>
+                    <span class="course-tag">Arquitetura</span>
+                  </div>
+                  <h3>Arquitetura .NET: Crie Sistemas com Backend e Frontend em C#</h3>
+                  <p>Aqui o foco é aprender arquitetura .NET de verdade, construindo um template profissional com backend e frontend integrados. Você entende como estruturar sistemas reais, reutilizáveis e preparados para crescer.</p>
+                  <div class="course-pricing mt-auto">
+                    <a href="HOTMART_CURSO_ARQUITETURA_AQUI" class="btn btn-outline-light flex-fill" target="_blank" rel="noopener noreferrer">Só este curso<br><strong>R$ 19,90/mês</strong></a>
+                    <a href="HOTMART_COMBO" class="btn btn-primary flex-fill" target="_blank" rel="noopener noreferrer">Todos os cursos<br><strong>R$ 29,90/mês</strong></a>
+                  </div>
+                  <a href="HOTMART_CURSO_ARQUITETURA_AQUI" class="course-link-inline" target="_blank" rel="noopener noreferrer">Conhecer o curso <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="course-card h-100">
+                <div class="course-thumb">
+                  <img src="assets/img/logo_c3.png" alt="Capa do curso Machine Learning com C#" class="course-thumb-image">
+                </div>
+                <div class="course-body">
+                  <div class="d-flex justify-content-between align-items-center gap-2 mb-2 flex-wrap">
+                    <span class="badge text-bg-dark">Avançado</span>
+                    <span class="course-tag">IA</span>
+                  </div>
+                  <h3>Machine Learning com C#</h3>
+                  <p>Curso voltado para quem já conhece C# e quer aplicar inteligência artificial na prática com ML.NET. Você aprende os fundamentos de Machine Learning e cria soluções reais de classificação, regressão, agrupamento, recomendação e análise de texto.</p>
+                  <div class="course-pricing mt-auto">
+                    <a href="HOTMART_CURSO_ML_AQUI" class="btn btn-outline-light flex-fill" target="_blank" rel="noopener noreferrer">Só este curso<br><strong>R$ 19,90/mês</strong></a>
+                    <a href="HOTMART_COMBO" class="btn btn-primary flex-fill" target="_blank" rel="noopener noreferrer">Todos os cursos<br><strong>R$ 29,90/mês</strong></a>
+                  </div>
+                  <a href="HOTMART_CURSO_ML_AQUI" class="course-link-inline" target="_blank" rel="noopener noreferrer">Conhecer o curso <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trilha" class="section-pad section-divider">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Guia para começar do zero</span>
+            <h2 class="display-6 fw-black mt-2">Do Zero ao Stack</h2>
+            <p class="section-copy mx-auto">Quer começar a aprender programação e não sabe qual curso fazer primeiro? Veja abaixo a sequência que sugerimos para você construir uma base sólida e adquirir uma visão profissional com mais clareza.</p>
+          </div>
+
+          <div class="guide-card row g-4 align-items-center mb-5">
+            <div class="col-12 col-lg-7">
+              <span class="eyebrow">Do Zero ao Stack</span>
+              <h3 class="fw-black mt-2 mb-3">Uma trilha sugerida para ajudar você a começar do zero e avançar com mais segurança</h3>
+              <p class="mb-3">Se você está começando agora, seguir uma ordem bem pensada pode facilitar muito. A ideia é construir a base da programação primeiro, depois entender o backend, avançar para o frontend e, por fim, entrar em arquitetura com uma visão mais madura do desenvolvimento.</p>
+              <p class="mb-0">Quem quiser seguir essa trilha pode fazer isso com cursos individuais ou aproveitar a assinatura de todos os cursos por <strong>R$ 29,90/mês</strong>, o que costuma ser a opção mais vantajosa para estudar várias áreas juntas.</p>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="stack-summary-box h-100">
+                <div class="small-label">SEQUÊNCIA SUGERIDA DE CURSOS</div>
+                <ul class="stack-summary-list list-unstyled mb-0">
+                  <li><span>1</span> Aprendendo a Programar</li>
+                  <li><span>2</span> Aprendendo Backend em C#: Banco de Dados, API e Segurança</li>
+                  <li><span>3</span> Aprendendo Frontend: HTML, CSS, Bootstrap, JS e Blazor</li>
+                  <li><span>4</span> Arquitetura .NET: Crie Sistemas com Backend e Frontend em C#</li>
+                </ul>
+                <a href="HOTMART_COMBO" class="btn btn-primary w-100 mb-2" target="_blank" rel="noopener noreferrer">Assinar todos os cursos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <article class="guide-step-card h-100">
+                <div class="guide-step-number">1</div>
+                <div>
+                  <span class="guide-step-label">Base</span>
+                  <h3>Aprendendo a Programar</h3>
+                  <p>Comece entendendo lógica, estrutura do código e os principais fundamentos da programação com C#. Essa etapa ajuda a criar segurança antes de avançar.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="guide-step-card h-100">
+                <div class="guide-step-number">2</div>
+                <div>
+                  <span class="guide-step-label">Backend</span>
+                  <h3>Aprendendo Backend em C#: Banco de Dados, API e Segurança</h3>
+                  <p>Depois da base, o próximo passo é aprender como o sistema funciona por trás das telas, criando APIs, lidando com banco de dados e segurança.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="guide-step-card h-100">
+                <div class="guide-step-number">3</div>
+                <div>
+                  <span class="guide-step-label">Frontend</span>
+                  <h3>Aprendendo Frontend: HTML, CSS, Bootstrap, JS e Blazor</h3>
+                  <p>Com a parte do servidor mais clara, você entra no lado visual da aplicação e aprende a construir páginas, estilos, interações e interfaces modernas.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="guide-step-card h-100">
+                <div class="guide-step-number">4</div>
+                <div>
+                  <span class="guide-step-label">Visão profissional</span>
+                  <h3>Arquitetura .NET: Crie Sistemas com Backend e Frontend em C#</h3>
+                  <p>Por fim, você passa a enxergar o sistema como um todo, entendendo estrutura, organização, integração entre camadas e decisões mais maduras de projeto.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="youtube" class="section-pad section-divider">
+        <div class="container">
+          <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-lg-between gap-3 mb-5 text-center text-lg-start">
+            <div class="section-heading mb-0">
+              <span class="eyebrow">Conteúdo gratuito</span>
+              <h2 class="display-6 fw-black mt-2 mb-2">Vídeos recentes do YouTube</h2>
+              <p class="section-copy mb-0">
+                Acompanhe conteúdos mais novos com dicas, aulas e novidades sobre programação, IA, C# e desenvolvimento de software.
+              </p>
+            </div>
+            <a href="https://www.youtube.com/@Develop4Us" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">
+              Ver canal completo
+            </a>
+          </div>
+
+          <div class="row g-4" id="youtubeGrid">
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="video-card h-100">
+                <a href="https://youtu.be/1iKY1ItYu68?si=5o9WdMfgRBOaTTtt" class="video-thumb video-thumb-link" target="_blank" rel="noopener noreferrer" aria-label="Assistir Dica C#: O que é o Span e como ele melhora a performance?">
+                  <img src="https://img.youtube.com/vi/1iKY1ItYu68/hqdefault.jpg" alt="Thumbnail do vídeo Dica C#: O que é o Span e como ele melhora a performance?" class="video-thumb-image">
+                  <span class="video-play-badge"><i class="bi bi-play-fill"></i></span>
+                </a>
+                <div class="video-body">
+                  <span class="video-label"><i class="bi bi-play-circle"></i> vídeo recente</span>
+                  <h3>Dica C#: O que é o Span e como ele melhora a performance?</h3>
+                  <p>Entenda de forma simples o que é Span&lt;T&gt; e como ele pode ajudar a melhorar performance e reduzir alocações.</p>
+                  <a href="https://youtu.be/1iKY1ItYu68?si=5o9WdMfgRBOaTTtt" class="btn btn-primary w-100 mt-auto" target="_blank" rel="noopener noreferrer">Assistir</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="video-card h-100">
+                <a href="https://youtu.be/xu59huKfxGQ?si=YypLojHMv-rT2zeE" class="video-thumb video-thumb-link" target="_blank" rel="noopener noreferrer" aria-label="Assistir Dica C#: Asynchronous Disposable">
+                  <img src="https://img.youtube.com/vi/xu59huKfxGQ/hqdefault.jpg" alt="Thumbnail do vídeo Dica C#: Asynchronous Disposable" class="video-thumb-image">
+                  <span class="video-play-badge"><i class="bi bi-play-fill"></i></span>
+                </a>
+                <div class="video-body">
+                  <span class="video-label"><i class="bi bi-play-circle"></i> vídeo recente</span>
+                  <h3>Dica C#: Asynchronous Disposable</h3>
+                  <p>Veja quando usar descarte assíncrono em C# e como esse recurso ajuda em cenários com operações assíncronas.</p>
+                  <a href="https://youtu.be/xu59huKfxGQ?si=YypLojHMv-rT2zeE" class="btn btn-primary w-100 mt-auto" target="_blank" rel="noopener noreferrer">Assistir</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <article class="video-card h-100">
+                <a href="https://www.youtube.com/watch?v=E_twRY6b7sg" class="video-thumb video-thumb-link" target="_blank" rel="noopener noreferrer" aria-label="Assistir Dica C#: Membros de Dados em Interfaces">
+                  <img src="https://img.youtube.com/vi/E_twRY6b7sg/hqdefault.jpg" alt="Thumbnail do vídeo Dica C#: Membros de Dados em Interfaces" class="video-thumb-image">
+                  <span class="video-play-badge"><i class="bi bi-play-fill"></i></span>
+                </a>
+                <div class="video-body">
+                  <span class="video-label"><i class="bi bi-play-circle"></i> vídeo recente</span>
+                  <h3>Dica C#: Membros de Dados em Interfaces</h3>
+                  <p>Conheça esse recurso do C# e entenda de forma prática como ele funciona no dia a dia do desenvolvimento.</p>
+                  <a href="https://www.youtube.com/watch?v=E_twRY6b7sg" class="btn btn-primary w-100 mt-auto" target="_blank" rel="noopener noreferrer">Assistir</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="section-pad section-divider">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-5">
+              <div class="about-visual card-surface h-100">
+                <div class="about-logo-wrap">
+                  <img src="assets/img/logo.png" alt="Logo da Develop4Us" class="about-logo">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <span class="eyebrow">Sobre a marca</span>
+              <h2 class="display-6 fw-black mt-2 mb-3">Develop4Us</h2>
+              <p>Desde 2011, a Develop4Us atua com suporte, consultoria e desenvolvimento de sistemas. Ao longo dessa jornada, acumulamos experiência prática em projetos reais e transformamos esse conhecimento em conteúdo para formação de novos profissionais.</p>
+              <p class="mb-4">Nosso objetivo é ajudar pessoas a aprender tecnologia de um jeito mais claro, com explicações acessíveis, exemplos práticos e uma visão mais próxima do mercado. A ideia é encurtar o caminho entre o estudo e a aplicação real do que foi aprendido.</p>
+              <div class="social-links d-flex flex-wrap gap-2">
+                <a href="https://www.youtube.com/@Develop4Us" class="btn btn-outline-light btn-sm" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube me-2"></i>YouTube</a>
+                <a href="https://github.com/Develop4Us-Company" class="btn btn-outline-light btn-sm" target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-2"></i>GitHub</a>
+                <a href="https://www.linkedin.com/company/develop4us" class="btn btn-outline-light btn-sm" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-divider py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <img src="assets/img/logo.png" alt="Logo da Develop4Us" class="footer-logo mb-3">
+            <p class="mb-1">Cursos práticos de programação, com foco em evolução real e conteúdo acessível para quem quer aprender C# e tecnologias relacionadas.</p>
+            <p class="mb-1 footer-contact"><strong>CNPJ:</strong> 141370810001-80</p>
+            <p class="mb-1 footer-contact"><strong>Telefone:</strong> (15) 99710-1060</p>
+            <p class="mb-2 footer-contact"><strong>E-mail:</strong> contato@develop4us.com</p>
+            <p class="mb-2 footer-contact"><strong>Endereço:</strong> Rua Suiça - Sorocaba, SP</p>
+            <small class="text-secondary">© <span id="currentYear"></span> Develop4Us. Todos os direitos reservados.</small>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="footer-links d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-end gap-2 gap-sm-3">
+              <a href="#inicio">Início</a>
+              <a href="#cursos">Cursos</a>
+              <a href="#trilha">Do Zero ao Stack</a>
+              <a href="#youtube">YouTube</a>
+              <a href="#sobre">Sobre</a>
+              <a href="termos.html">Termos e condições</a>
+              <a href="privacidade.html">Privacidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-live="polite" aria-label="Aviso de privacidade e cookies" hidden>
+    <div class="cookie-consent__content">
+      <p>
+        Utilizamos cookies e tecnologias semelhantes para melhorar sua experiência e analisar acessos ao site. Ao clicar em Concordar, você aceita esse uso conforme nossa <a href="privacidade.html">Política de Privacidade</a> e nossos <a href="termos.html">Termos e Condições</a>.
+      </p>
+      <button type="button" class="btn btn-primary" id="acceptCookies">Concordar</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
