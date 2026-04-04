@@ -6,10 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const curriculumContainer = document.getElementById('curriculumList');
   const youtubeContainer = document.getElementById('youtubeLessons');
 
-  const embedOrigin = window.location.origin && window.location.origin !== 'null'
-    ? encodeURIComponent(window.location.origin)
-    : encodeURIComponent('https://develop4us.com');
-
   const getVideoId = (youtubeUrl) => {
     if (!youtubeUrl) return null;
 
@@ -29,6 +25,48 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {
       return null;
     }
+  };
+
+  const loadYouTubeIframeApi = () => {
+    if (window.YT && window.YT.Player) {
+      return Promise.resolve(window.YT);
+    }
+
+    return new Promise((resolve) => {
+      const existingScript = document.querySelector('script[src="https://www.youtube.com/iframe_api"]');
+
+      if (!existingScript) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
+      }
+
+      window.onYouTubeIframeAPIReady = () => resolve(window.YT);
+    });
+  };
+
+  const initializePlayers = () => {
+    const players = document.querySelectorAll('.yt-player[data-video-id]');
+    if (!players.length) return;
+
+    const playerOrigin = window.location.origin && window.location.origin !== 'null'
+      ? window.location.origin
+      : 'https://develop4us.com';
+
+    loadYouTubeIframeApi().then((YT) => {
+      players.forEach((playerElement) => {
+        const videoId = playerElement.getAttribute('data-video-id');
+        if (!videoId || !playerElement.id) return;
+
+        new YT.Player(playerElement.id, {
+          videoId,
+          playerVars: {
+            rel: 0,
+            origin: playerOrigin
+          }
+        });
+      });
+    });
   };
 
   if (descriptionContainer && Array.isArray(data.description)) {
@@ -102,11 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter((lesson) => lesson.videoId);
 
     youtubeContainer.innerHTML = youtubeLessons
-      .map((lesson) => {
+      .map((lesson, index) => {
+        const playerId = `yt-lesson-${index + 1}`;
+
         return `<div class="col-12 col-lg-6">
             <article class="video-lesson-card card-surface h-100">
               <div class="ratio ratio-16x9 rounded overflow-hidden mb-3">
-                <iframe src="https://www.youtube.com/embed/${lesson.videoId}?rel=0&origin=${embedOrigin}" title="Aula gratuita: ${lesson.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div id="${playerId}" class="yt-player" data-video-id="${lesson.videoId}" aria-label="Aula gratuita: ${lesson.title}"></div>
               </div>
               <span class="guide-step-label">${lesson.section}</span>
               <h3>${lesson.title}</h3>
@@ -116,4 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .join('');
   }
+
+  initializePlayers();
 });
