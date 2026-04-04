@@ -863,6 +863,26 @@ h4,
   width: fit-content;
 }
 
+
+.inline-play-trigger.video-thumb-link {
+  background: transparent;
+}
+
+.open-youtube-link {
+  color: #d8d0ff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.open-youtube-link:hover,
+.open-youtube-link:focus {
+  color: #fff;
+}
+
+.inline-player {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .course-pricing-inline {
     grid-template-columns: repeat(2, minmax(0, 1fr));

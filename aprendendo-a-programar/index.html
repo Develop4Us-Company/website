@@ -80,11 +80,13 @@
             <div class="col-12 col-lg-5">
               <div class="card-surface course-video-presentation">
                 <h2 class="h3 fw-black mb-3">Vídeo de apresentação</h2>
-                <a href="https://youtu.be/44EhH_-DKz4" class="video-thumb video-thumb-link rounded overflow-hidden" target="_blank" rel="noopener noreferrer" aria-label="Assistir apresentação do curso no YouTube">
+                <button type="button" class="video-thumb video-thumb-link rounded overflow-hidden border-0 p-0 w-100 text-start inline-play-trigger" data-video-id="44EhH_-DKz4" data-target="presentationPlayer" aria-label="Assistir apresentação do curso aqui mesmo">
                   <img src="https://img.youtube.com/vi/44EhH_-DKz4/hqdefault.jpg" alt="Thumbnail do vídeo de apresentação do curso" class="video-thumb-image">
                   <span class="video-play-badge"><i class="bi bi-play-fill"></i></span>
-                </a>
-                <a href="https://youtu.be/44EhH_-DKz4" class="btn btn-outline-light mt-3" target="_blank" rel="noopener noreferrer">Assistir no YouTube</a>
+                </button>
+                <div id="presentationPlayer" class="inline-player mt-3" hidden></div>
+                <button type="button" class="btn btn-outline-light mt-3 inline-play-trigger" data-video-id="44EhH_-DKz4" data-target="presentationPlayer">Assistir aqui mesmo</button>
+                <a href="https://youtu.be/44EhH_-DKz4" class="btn btn-link btn-sm p-0 mt-2 open-youtube-link" target="_blank" rel="noopener noreferrer">Ou abrir no YouTube</a>
               </div>
             </div>
           </div>
