@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aprendendo Backend em C#: Banco de Dados, API e Segurança | Develop4Us</title>
+  <meta name="description" content="Curso Aprendendo Backend em C#: construa APIs RESTful com ASP.NET Core, EF Core, SQLite e segurança com JWT.">
+  <meta name="theme-color" content="#171717">
+
+  <meta property="og:title" content="Aprendendo Backend em C#: Banco de Dados, API e Segurança | Develop4Us">
+  <meta property="og:description" content="Página oficial do curso Aprendendo Backend em C# com descrição, apresentação e conteúdo completo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://develop4us.com/aprendendo-backend-em-c-sharp">
+  <meta property="og:image" content="../assets/img/logo_c2.png">
+
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" aria-label="Barra principal">
+        <div class="container py-2">
+          <a class="navbar-brand d-flex align-items-center gap-3" href="../index.html#inicio" aria-label="Voltar para o início">
+            <img src="../assets/img/logo.png" alt="Logo da Develop4Us" class="brand-logo">
+          </a>
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 mt-3 mt-lg-0">
+              <li class="nav-item"><a class="nav-link" href="../index.html#inicio">Início</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#cursos">Cursos</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#trilha">Do Zero ao Stack</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#youtube">YouTube</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#sobre">Sobre</a></li>
+              <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm px-4 py-2" href="https://academy.develop4us.com/pt-br/club/develop4us" target="_blank" rel="noopener noreferrer">Acessar cursos</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="course-hero section-pad">
+        <div class="container">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-12 col-lg-6">
+              <span class="eyebrow">Curso completo de backend com C#</span>
+              <h1 class="display-5 fw-black mt-3 mb-3">Aprendendo Backend em C#: Banco de Dados, API e Segurança</h1>
+              <p class="hero-copy mb-4">Avance no C# criando uma API RESTful com ASP.NET Core, banco de dados com EF Core e SQLite, e proteção com autenticação e autorização JWT.</p>
+              <div class="course-pricing course-pricing-inline justify-content-center">
+                <a href="https://academy.develop4us.com/pt-br/club/develop4us/products/7412354" class="btn btn-outline-light flex-fill" target="_blank" rel="noopener noreferrer">Só este curso<br><strong>R$ 19,90/mês</strong></a>
+                <a href="https://pay.hotmart.com/E105148294Q" class="btn btn-primary flex-fill" target="_blank" rel="noopener noreferrer">Todos os cursos<br><strong>R$ 29,90/mês</strong></a>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="course-cover card-surface">
+                <img src="../assets/img/logo_c2.png" alt="Capa do curso Aprendendo Backend em C#: Banco de Dados, API e Segurança" class="course-cover-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad section-divider">
+        <div class="container">
+          <div class="row g-4 g-lg-5">
+            <div class="col-12 col-lg-7">
+              <div class="card-surface course-description">
+                <h2 class="h3 fw-black mb-3">Descrição do curso</h2>
+                <div id="courseDescription" class="course-description-content"></div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="card-surface course-video-presentation">
+                <h2 class="h3 fw-black mb-3">Vídeo de apresentação</h2>
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                  <iframe src="https://www.youtube.com/embed/WlIqNqLHCUg" title="Vídeo de apresentação do curso Aprendendo Backend em C#: Banco de Dados, API e Segurança" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="conteudo" class="section-pad section-divider">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Plano de estudos</span>
+            <h2 class="display-6 fw-black mt-2">Conteúdo completo do curso</h2>
+            <p class="section-copy mx-auto">Veja o que você vai aprender ao longo do curso. Assista abaixo algumas aulas gratuitas para você conhecer a dinâmica do curso.</p>
+          </div>
+          <div id="curriculumList" class="curriculum-list"></div>
+        </div>
+      </section>
+
+      <section id="aulas-youtube" class="section-pad section-divider">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Aulas abertas</span>
+            <h2 class="display-6 fw-black mt-2">Assista algumas aulas no YouTube</h2>
+            <p class="section-copy mx-auto">Estas aulas já estão disponíveis no YouTube e você pode assistir direto por aqui.</p>
+          </div>
+          <div id="youtubeLessons" class="row g-4"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-divider py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <img src="../assets/img/logo.png" alt="Logo da Develop4Us" class="footer-logo mb-3">
+            <p class="mb-1">Cursos práticos de programação, com foco em evolução real e conteúdo acessível para quem quer aprender C# e tecnologias relacionadas.</p>
+            <small class="text-secondary">© <span id="currentYear"></span> Develop4Us. Todos os direitos reservados.</small>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="footer-links d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-end gap-2 gap-sm-3">
+              <a href="../index.html#inicio">Início</a>
+              <a href="../index.html#cursos">Cursos</a>
+              <a href="../index.html#trilha">Do Zero ao Stack</a>
+              <a href="../termos.html">Termos e condições</a>
+              <a href="../privacidade.html">Privacidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    window.coursePageData = {
+      description: [
+        'Se você já aprendeu os fundamentos da programação com C#, este curso é o próximo passo ideal para você. Neste treinamento, você vai aprender como construir um backend profissional, criando uma API RESTful do zero usando ASP.NET Core e conectando-a a um banco de dados real com o Entity Framework Core e SQLite.',
+        'Você vai entender de forma simples o que é backend, como funcionam as APIs e os principais conceitos REST. Depois, vamos direto para a prática, começando pela criação de endpoints para listar, buscar, cadastrar, atualizar e excluir produtos.',
+        'Ao longo do curso, aplicaremos boas práticas como separação de responsabilidades, uso de interfaces e injeção de dependência — tudo explicado com exemplos claros para facilitar o entendimento.',
+        'Você também vai aprender a trabalhar com banco de dados de verdade, incluindo configuração do DbContext, criação de migrações e operações CRUD completas usando Entity Framework (ou EF Core).',
+        'Na parte de segurança, você aprenderá a proteger sua API com autenticação e autorização usando JWT, criando um endpoint de login e controlando o acesso por perfil de usuário.',
+        'Por fim, encerramos com uma visão clara sobre os próximos passos que você pode seguir para continuar evoluindo no mundo do desenvolvimento backend.',
+        'Se você quer consolidar seu conhecimento em C# e se tornar um desenvolvedor backend completo, este curso é para você.'
+      ],
+      lessons: [
+        { section: 'Introdução', title: 'Introdução', youtube: 'https://youtu.be/GBhgKj8dXQE' },
+        { section: 'Entendendo backend e APIs RESTful', title: 'O que é Backend?', youtube: 'https://youtu.be/SnbsVc_PAxI' },
+        { section: 'Entendendo backend e APIs RESTful', title: 'O que é uma API?', youtube: 'https://youtu.be/-yW75Wqumak' },
+        { section: 'Entendendo backend e APIs RESTful', title: 'Conceitos REST no dia a dia' },
+        { section: 'Ferramentas', title: 'Instalação do VS Code' },
+        { section: 'Ferramentas', title: 'Instalação do kit de ferramentas do C#' },
+        { section: 'Ferramentas', title: 'Instalação do .NET' },
+        { section: 'Programando endpoints', title: 'Criando o projeto do curso' },
+        { section: 'Programando endpoints', title: 'Configurando Swagger no projeto' },
+        { section: 'Programando endpoints', title: 'Criando endpoint para listar produtos' },
+        { section: 'Programando endpoints', title: 'Criando endpoint para buscar produto por ID' },
+        { section: 'Programando endpoints', title: 'Criando endpoint para inserir produto' },
+        { section: 'Programando endpoints', title: 'Criando endpoint para atualizar produto' },
+        { section: 'Programando endpoints', title: 'Criando endpoint para remover produto', youtube: 'https://youtu.be/ebkvtQMx7ww' },
+        { section: 'Programando endpoints', title: 'Trabalhando com Controllers' },
+        { section: 'Programando endpoints', title: 'Adicionando os métodos post, put e delete no Controller' },
+        { section: 'Boas práticas', title: 'Separando responsabilidades: criando Service para Produtos' },
+        { section: 'Boas práticas', title: 'Usando interfaces: criando a interface IProdutosService' },
+        { section: 'Boas práticas', title: 'Entendendo Injeção de Dependência', youtube: 'https://youtu.be/mtLNZI56HeQ' },
+        { section: 'Banco de dados', title: 'O que é um banco de dados?' },
+        { section: 'Banco de dados', title: 'Instalando o Entity Framework' },
+        { section: 'Banco de dados', title: 'Configurando o DbContext para SQLite' },
+        { section: 'Banco de dados', title: 'Criando as migrações e gerando o banco de dados' },
+        { section: 'CRUD com banco de dados (Entity Framework)', title: 'Inserindo produto no banco de dados' },
+        { section: 'CRUD com banco de dados (Entity Framework)', title: 'Listando todos os produtos' },
+        { section: 'CRUD com banco de dados (Entity Framework)', title: 'Buscando um produto por ID', youtube: 'https://youtu.be/jSA2IyuJXQc' },
+        { section: 'CRUD com banco de dados (Entity Framework)', title: 'Atualizando um produto' },
+        { section: 'CRUD com banco de dados (Entity Framework)', title: 'Removendo um produto' },
+        { section: 'Validações e regras de negócio', title: 'Validação de dados com DataAnnotations' },
+        { section: 'Validações e regras de negócio', title: 'Implementando regras de negócio' },
+        { section: 'Segurança na API', title: 'Por que proteger uma API?' },
+        { section: 'Segurança na API', title: 'Entendendo autenticação e autorização' },
+        { section: 'Segurança na API', title: 'Instalando e configurando o JWT' },
+        { section: 'Segurança na API', title: 'Criando o endpoint de Login' },
+        { section: 'Segurança na API', title: 'Configurando o Swagger para aceitar tokens JWT' },
+        { section: 'Segurança na API', title: 'Implementando autenticação JWT' },
+        { section: 'Segurança na API', title: 'Implementando autorização JWT' },
+        { section: 'Segurança na API', title: 'Ajustes finais e análise da nossa API' },
+        { section: 'Role Play', title: 'Apresentando os endpoints da API ao cliente' },
+        { section: 'Atualizações e ajustes', title: 'Atualização para a versão 10 do .NET' },
+        { section: 'Próximos passos', title: 'Próximos passos para evolução no backend' },
+        { section: 'Código fonte', title: 'Código fonte com a versão 9 do .NET' },
+        { section: 'Código fonte', title: 'Código fonte com a versão 10 do .NET' }
+      ]
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/course-page.js"></script>
+</body>
+</html>
