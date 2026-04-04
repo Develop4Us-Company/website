@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const curriculumContainer = document.getElementById('curriculumList');
   const youtubeContainer = document.getElementById('youtubeLessons');
 
+  const embedOrigin = window.location.origin && window.location.origin !== 'null'
+    ? encodeURIComponent(window.location.origin)
+    : encodeURIComponent('https://develop4us.com');
+
   const getVideoId = (youtubeUrl) => {
     if (!youtubeUrl) return null;
 
@@ -102,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<div class="col-12 col-lg-6">
             <article class="video-lesson-card card-surface h-100">
               <div class="ratio ratio-16x9 rounded overflow-hidden mb-3">
-                <iframe src="https://www.youtube.com/embed/${lesson.videoId}" title="Aula gratuita: ${lesson.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/${lesson.videoId}?rel=0&origin=${embedOrigin}" title="Aula gratuita: ${lesson.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
               <span class="guide-step-label">${lesson.section}</span>
               <h3>${lesson.title}</h3>
