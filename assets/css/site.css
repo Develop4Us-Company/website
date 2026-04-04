@@ -759,6 +759,16 @@ h4,
   line-height: 1.75;
 }
 
+.course-video-presentation .btn {
+  width: fit-content;
+}
+
+.video-lesson-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
 .curriculum-list {
   display: block;
 }
@@ -830,6 +840,7 @@ h4,
 
 .lesson-badge {
   width: fit-content;
+  text-decoration: none;
   font-size: 0.82rem;
   color: var(--muted);
   border: 1px solid rgba(255, 255, 255, 0.15);

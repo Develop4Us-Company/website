@@ -6,25 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const curriculumContainer = document.getElementById('curriculumList');
   const youtubeContainer = document.getElementById('youtubeLessons');
 
-  const toEmbedUrl = (youtubeUrl) => {
+  const getVideoId = (youtubeUrl) => {
     if (!youtubeUrl) return null;
 
     try {
       const parsedUrl = new URL(youtubeUrl);
       const host = parsedUrl.hostname.replace('www.', '');
-      let videoId = null;
 
       if (host === 'youtu.be') {
-        videoId = parsedUrl.pathname.slice(1);
-      } else if (host.includes('youtube.com')) {
-        videoId = parsedUrl.searchParams.get('v');
-        if (!videoId && parsedUrl.pathname.includes('/embed/')) {
-          videoId = parsedUrl.pathname.split('/embed/')[1]?.split('/')[0];
-        }
+        return parsedUrl.pathname.slice(1) || null;
       }
 
-      if (!videoId) return null;
-      return `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`;
+      if (host.includes('youtube.com')) {
+        return parsedUrl.searchParams.get('v');
+      }
+
+      return null;
     } catch {
       return null;
     }
@@ -53,34 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="accordion course-accordion" id="courseAccordion">
         ${groupedSections
           .map((section, index) => {
-            const sectionId = `section-${index + 1}`;
             const headingId = `heading-${index + 1}`;
             const collapseId = `collapse-${index + 1}`;
 
             const lessonsHtml = section.lessons
               .map((lesson) => {
-                const embedUrl = toEmbedUrl(lesson.youtube);
-                const lessonMeta = embedUrl
-                  ? '<span class="lesson-badge lesson-badge-open">Aula gratuita disponível</span>'
+                const hasYoutube = Boolean(getVideoId(lesson.youtube));
+                const lessonMeta = hasYoutube
+                  ? '<a href="#aulas-youtube" class="lesson-badge lesson-badge-open">Aula gratuita disponível</a>'
                   : '<span class="lesson-badge">Exclusiva para alunos</span>';
-
-                const lessonVideo = embedUrl
-                  ? `<div class="ratio ratio-16x9 rounded overflow-hidden mt-3">
-                      <iframe src="${embedUrl}" title="${lesson.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>`
-                  : '';
 
                 return `<li>
                     <div class="lesson-header">
                       <span class="lesson-title">${lesson.title}</span>
                       ${lessonMeta}
                     </div>
-                    ${lessonVideo}
                   </li>`;
               })
               .join('');
 
-            return `<div class="accordion-item curriculum-section" id="${sectionId}">
+            return `<div class="accordion-item curriculum-section">
                 <h3 class="accordion-header" id="${headingId}">
                   <button class="accordion-button ${index === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="${collapseId}">
                     <span class="curriculum-index">Seção ${index + 1}</span>
@@ -104,20 +93,21 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter((lesson) => lesson.youtube)
       .map((lesson) => ({
         ...lesson,
-        embedUrl: toEmbedUrl(lesson.youtube)
+        videoId: getVideoId(lesson.youtube)
       }))
-      .filter((lesson) => lesson.embedUrl);
+      .filter((lesson) => lesson.videoId);
 
     youtubeContainer.innerHTML = youtubeLessons
       .map((lesson) => {
         return `<div class="col-12 col-lg-6">
             <article class="video-lesson-card card-surface h-100">
-              <div class="ratio ratio-16x9 rounded overflow-hidden mb-3">
-                <iframe src="${lesson.embedUrl}" title="${lesson.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <span class="guide-step-label">${lesson.section}</span>
+              <a href="${lesson.youtube}" class="video-thumb video-thumb-link rounded overflow-hidden" target="_blank" rel="noopener noreferrer" aria-label="Assistir ${lesson.title} no YouTube">
+                <img src="https://img.youtube.com/vi/${lesson.videoId}/hqdefault.jpg" alt="Thumbnail da aula ${lesson.title}" class="video-thumb-image">
+                <span class="video-play-badge"><i class="bi bi-play-fill"></i></span>
+              </a>
+              <span class="guide-step-label mt-3">${lesson.section}</span>
               <h3>${lesson.title}</h3>
-              <a href="${lesson.youtube}" class="btn btn-outline-light mt-3" target="_blank" rel="noopener noreferrer">Abrir no YouTube</a>
+              <a href="${lesson.youtube}" class="btn btn-outline-light mt-3" target="_blank" rel="noopener noreferrer">Assistir no YouTube</a>
             </article>
           </div>`;
       })
